@@ -5,6 +5,10 @@ public class Exercise {
     private Treadmill treadmill;
     private Elliptical eliptical;
 
+    public Exercise() {
+    }
+
+        
     public Exercise(Treadmill treadmill, Elliptical eliptical) {
         this.treadmill = treadmill;
         this.eliptical = eliptical;
@@ -23,10 +27,11 @@ public class Exercise {
     }
     
     public int playTreadmill(int time) {
-        return time*350;
+        return (int)((time/60.0)*350.0);
     }
     
     public int playElliptical(int time){
-        return time*400;
+        return (int)((time/60.0)*400.0);
     }
+    
 }
